@@ -16,11 +16,83 @@
             word-spacing: 10px;
             border-radius: 90px;
          }
+         /* Style formulaire*/
+        form{
+            width: 50%;
+            margin: 50px auto;
+            margin-top: 60px;
+        }
+        legend{
+            text-align: right;
+            color: #F60;
+            font-size: 19px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        fieldset{
+          border-bottom-right-radius: 40px;
+            border-top-left-radius: 40px;
+        }
+        .inp{
+            text-align: center;
+            color: rgb(51, 5, 108);
+            padding: 8px;
+            margin: 14px ;
+            margin-left: 30px;
+            width: 250px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-family: cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        input[type="email"]{
+            position: relative;
+            left: 75px;
+        }
+        label{
+            margin-left: 30px;
+            font-family: cursive , 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 22px;
+            color: #F60;
+        }
+        input::placeholder{
+            color: rgb(51, 5, 108);;
+        }
+        input[type="submit"]{
+            display: block;
+            margin: 10px auto;
+            padding: 9px;
+            width: 160px;
+            font-size: 24px;
+            background-color: rgb(51, 5, 108);; ;
+            color: snow;
+            border-radius: 14px;
+            transition: transform 0.3 ease;
+            transition: background-color 2s;
+        }
+         input[type="submit"]:hover{
+            transform: scale(1.1);
+            background-color:  rgba(92, 24, 174, 0.893);;;
+         }
+        hr{
+            border: 3px solid black;
+        }
      </style>
 </head>
 <body>
 
     <h1>  Petit Formulaire de controle avec Javascript</h1>
-    
+      <!------ Contenu du formulaire-------->
+ <hr>
+      <form action="tritement.php" method="post">
+        <fieldset>
+            <legend>
+                Informations personnelle
+            </legend>
+       <label for="Nom complet"> Nom  complet: <input type="text" name="Name user" placeholder="Votre nom complet" class="inp"></label> <br>
+       <label for="Email"> Email: <input type="email" name="Email user" placeholder="Votre email" class="inp"></label><br>
+       <label for="password"> Mot de passe: <input type="password" name="Password user" placeholder="Votre mot de passe"class="inp"></label><br>
+        <input type="submit" value="Envoyer">
+        </fieldset>
+      </form>
 </body>
 </html>
